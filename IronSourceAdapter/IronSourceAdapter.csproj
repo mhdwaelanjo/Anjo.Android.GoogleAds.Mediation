@@ -1,8 +1,54 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
-    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net8.0-android;net7.0-android</TargetFrameworks>
+		<SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<PropertyGroup>
+		<PackageId>Anjo.Android.GoogleAds.Mediation.IronSourceAdapter</PackageId>
+		<PackageVersion>7.7.0.1</PackageVersion>
+		<AssemblyVersion>7.7.0.1</AssemblyVersion>
+		<FileVersion>7.7.0.1</FileVersion>
+		<Version>7.7.0.1</Version>
+		<Title>Anjo Android IronSource Mediation Adapter For The Google Mobile Ads SDK</Title>
+		<Authors>Wael Anjo</Authors>
+		<Owners>Wael Anjo</Owners>
+		<PackageProjectUrl>https://github.com/mhdwaelanjo/Anjo.Android.GoogleAds.Mediation</PackageProjectUrl>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Description>.NET for Android (formerly Xamarin.Android) bindings for Google Play Services library 'com.google.ads.mediation:ironsource'.</Description>
+		<PackageReleaseNotes>IronSource Mediation Adapter For The Google Mobile Ads SDK v7.7.0.1</PackageReleaseNotes>
+		<Copyright>Copyright (c) 2024 Wael Anjo</Copyright>
+		<PackageTags>Xamarin.Android, Mediation, GoogleAdsMediation, IronSource, IronSourceAdapter</PackageTags>
+		<Summary>The IronSource mediation adapter is a library that handles communication between the Google Mobile Ads SDK and the IronSource SDK. It enables you to load ads from IronSource using the mediation feature in the Google Mobile Ads SDK.</Summary>
+		<!-- Include symbol files (*.pdb) in the built .nupkg -->
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageIcon>icon.png</PackageIcon>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Jars\ironsource-7.7.0.1.aar" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup> 
+	<ItemGroup>
+		<PackageReference Include="Anjo.Android.GoogleServices.Ads" Version="22.6.0" />
+		<PackageReference Include="Anjo.Android.IronSource" Version="7.8.1" />
+		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.7.1.1" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib.Jdk7" Version="1.9.22.1" />
+	</ItemGroup>
 </Project>

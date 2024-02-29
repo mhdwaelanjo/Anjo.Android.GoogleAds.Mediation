@@ -5,5 +5,10 @@
   
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  
+   System.Collections.Generic.IList<Com.Google.Android.Gms.Ads.Mediation.MediationConfiguration> mediationConfigurations
   -->
+
+	<attr path="/api/package[@name='com.google.ads.mediation.adcolony']/class[@name='AdColonyMediationAdapter']/method[@name='initialize' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.google.android.gms.ads.mediation.InitializationCompleteCallback'] and parameter[3][@type='java.util.List&lt;com.google.android.gms.ads.mediation.MediationConfiguration&gt;']]" name="managedOverride">override</attr>
+  
 </metadata>
